@@ -268,5 +268,35 @@
         "photo": "https://assets.loket.com/neo/production/images/banner/20260618104314_6a33695275a4e.jpeg",
         "registration_link": "https://www.loket.com/event/fia-rallycross-world-cup-indonesia-2026_w52",
         "apple_maps_link": "https://maps.apple.com/?ll=-6.1205913,106.8270569&q=E-Prix%20Circuit%20%28JIEC%29%2C%20Ancol"
+    },
+    {
+        "id": "Konser30thProjectPop",
+        "title": "KONSER 30th Project Pop",
+        "description": "KONSER 30th Project Pop",
+        "organizer": "Northstar Entertainments",
+        "location": "Tennis Indoor Senayan",
+        "latitude": -6.223559,
+        "longitude": 106.8094288,
+        "period": "2026-08-08 19:00:00 Asia/Jakarta - 2026-08-08 21:00:00 Asia/Jakarta",
+        "ticket_price": "550000",
+        "currency": "IDR",
+        "photo": "https://assets.loket.com/neo/production/images/banner/20260310140535_69afc2bf08c80.jpeg",
+        "registration_link": "https://www.loket.com/event/Konser30thProjectPop",
+        "apple_maps_link": "https://maps.apple.com/?ll=-6.223559,106.8094288&q=Tennis%20Indoor%20Senayan"
+    },
+    {
+        "id": "joylandsessions2026",
+        "title": "Joyland Sessions 2026",
+        "description": "Joyland Sessions returns in 2026 with another carefully curated weekend of music, culture, and immersive experiences. Expect a genre-spanning lineup, special moments, and the signature Joyland atmosphere — all coming together for two unforgettable days in Jakarta.",
+        "organizer": "Plainsong Live",
+        "location": "GBK, Senayan Jakarta",
+        "latitude": 37.25020221816498,
+        "longitude": -121.8783340000463,
+        "period": "2026-11-28 14:30:00 Asia/Jakarta - 2026-11-29 23:45:00 Asia/Jakarta",
+        "ticket_price": "588000",
+        "currency": "IDR",
+        "photo": "https://assets.loket.com/neo/production/images/banner/20260624065902_6a3b1dc6b0a9f.jpeg",
+        "registration_link": "https://www.loket.com/event/joylandsessions2026",
+        "apple_maps_link": "https://maps.apple.com/?ll=37.25020221816498,-121.8783340000463&q=GBK%2C%20Senayan%20Jakarta"
     }
 ]
