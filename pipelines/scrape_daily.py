@@ -75,7 +75,7 @@ def run_loket_pipeline():
             # -------------------------------------
             # Translation (Deskripsi ke Bahasa Inggris)
             # -------------------------------------
-            raw_desc = event_data.get("deskripsi", "")
+            raw_desc = event_data.get("description", "")
             translated_desc = ""
             
             if raw_desc:
@@ -91,24 +91,23 @@ def run_loket_pipeline():
             # Persiapan Data untuk Database
             # -------------------------------------
             event_data_to_save = {
-                "event_id": event_id,
-                "judul": event_data.get("judul", ""),
+                "id": event_id,
+                "title": event_data.get("title", ""),
+                "description": translated_desc,
                 "organizer": event_data.get("organizer", ""),
-                "harga_tiket": event_data.get("harga", ""),
-                "mata_uang": event_data.get("mata_uang", "IDR"),
-                "lokasi": venue,
+                "location": venue,
                 "latitude": lat,
                 "longitude": lng,
-                "apple_maps_link": apple_maps_link,
-                "waktu": event_data.get("waktu", ""),
-                "deskripsi": translated_desc,
-                "link_registrasi": clean_link,
+                "period": event_data.get("period", ""),
+                "ticket_price": event_data.get("ticket_price", ""),
+                "currency": event_data.get("currency", "IDR"),
                 "photo": event_data.get("photo", ""), 
-                "status_code": 200
+                "registration_link": clean_link,
+                "apple_maps_link": apple_maps_link
             }
 
             save_event(event_data_to_save)
-            print(f"[SUCCESS] Tersimpan: {event_data_to_save['judul']}\n")
+            print(f"[SUCCESS] Tersimpan: {event_data_to_save['title']}\n")
 
     finally:
         scraper.close()

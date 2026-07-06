@@ -10,17 +10,17 @@ class EventParser:
         soup = BeautifulSoup(html, "lxml")
 
         result = {
-            "event_id": None,
-            "judul": None,
-            "deskripsi": None,
+            "id": None,
+            "title": None,
+            "description": None,
             "organizer": None,
             "venue_name": None,
             "address": None,
             "city": None,
             "province": None,
-            "waktu": None,
-            "harga": None,
-            "mata_uang": "IDR",
+            "period": None,
+            "ticket_price": None,
+            "currency": "IDR",
             "photo": None,
             "terms_conditions": None,
             "latitude": None,
@@ -64,13 +64,12 @@ class EventParser:
         # ===========================
         # TITLE, DESC & ID
         # ===========================
-        result["judul"] = schema.get("name")
+        result["title"] = schema.get("name")
         raw_desc = schema.get("description")
         if raw_desc:
-            result["deskripsi"] = BeautifulSoup(raw_desc, "lxml").get_text(separator=" ", strip=True)
+            result["description"] = BeautifulSoup(raw_desc, "lxml").get_text(separator=" ", strip=True)
 
-        # result["event_id"] = schema.get("url", url).split("/")[-1]
-        result["event_id"] = schema.get("url", url).split("?")[0].split("/")[-1]
+        result["id"] = schema.get("url", url).split("?")[0].split("/")[-1]
 
         # ===========================
         # WAKTU
@@ -78,7 +77,7 @@ class EventParser:
         start_date = schema.get("startDate", "")
         end_date = schema.get("endDate", "")
         if start_date:
-            result["waktu"] = f"{start_date} - {end_date}" if end_date else start_date
+            result["period"] = f"{start_date} - {end_date}" if end_date else start_date
 
         # ===========================
         # LOCATION & ADDRESS (Anti-Error)
@@ -117,18 +116,18 @@ class EventParser:
 
         harga = offers_dict.get("lowPrice") or offers_dict.get("price")
         if harga:
-            result["harga"] = str(harga)
+            result["ticket_price"] = str(harga)
         
-        result["mata_uang"] = offers_dict.get("priceCurrency", "IDR")
+        result["currency"] = offers_dict.get("priceCurrency", "IDR")
         
         location_context = f"{result.get('venue_name', '')} {result.get('city', '')} {result.get('province', '')}".lower()
         
         if "malaysia" in location_context or "kuala lumpur" in location_context:
-            result["mata_uang"] = "MYR"
+            result["currency"] = "MYR"
         elif "singapore" in location_context or "singapura" in location_context:
-            result["mata_uang"] = "SGD"
+            result["currency"] = "SGD"
         elif "australia" in location_context or "sydney" in location_context:
-            result["mata_uang"] = "AUD"
+            result["currency"] = "AUD"
 
         # ===========================
         # POSTER / GAMBAR (PHOTO)
