@@ -20,7 +20,11 @@ VENUE_ALIASES = {
     "cinema 4d hall": "Taman Ismail Marzuki, Jakarta", 
     "taman ismail marzuki": "Taman Ismail Marzuki, Jakarta",
     "fakultas ekonomi dan bisnis universitas indonesia": "Fakultas Ekonomi dan Bisnis UI, Depok",
-    "feb ui": "Fakultas Ekonomi dan Bisnis UI, Depok"
+    "feb ui": "Fakultas Ekonomi dan Bisnis UI, Depok",
+    "swasana lippo kuningan grand ballroom": "Lippo Kuningan, Jakarta",
+    "swasana lippo kuningan": "Lippo Kuningan, Jakarta",
+    "amphitheatre, kab. lampung selatan, lampung": "Krakatau Park, Bakauheni, Lampung Selatan",
+    "amphitheatre, kab. lampung selatan": "Krakatau Park, Bakauheni, Lampung Selatan"
 }
 
 def clean_location_name(location):

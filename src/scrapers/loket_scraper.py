@@ -99,17 +99,3 @@ class LoketScraper:
             html,
             url
         )
-
-    def debug_event_page(self, url):
-
-        self.page.goto(
-            url,
-            wait_until="domcontentloaded"
-        )
-
-        html = self.page.content()
-
-        with open("event_debug.html", "w", encoding="utf-8") as f:
-            f.write(html)
-
-        print("Saved event_debug.html")
