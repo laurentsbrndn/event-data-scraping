@@ -17,28 +17,16 @@ class EventParser:
     @staticmethod
     def _normalize_period(date_str: str, time_str: str):
         """
-        date_str:
-            18 Juli 2026
-            25 - 26 Juli 2026
-
-        time_str:
-            15:00 - 19:00
-            10:00 - 22:00
+        date_str mendeteksi 3 skenario:
+            1. Hari tunggal: 18 Juli 2026
+            2. Multi-hari (bulan sama): 25 - 26 Juli 2026
+            3. Multi-hari (bulan beda): 19 Juni - 30 Agustus 2026
         """
 
         months = {
-            "Januari": 1,
-            "Februari": 2,
-            "Maret": 3,
-            "April": 4,
-            "Mei": 5,
-            "Juni": 6,
-            "Juli": 7,
-            "Agustus": 8,
-            "September": 9,
-            "Oktober": 10,
-            "November": 11,
-            "Desember": 12,
+            "Januari": 1, "Februari": 2, "Maret": 3, "April": 4,
+            "Mei": 5, "Juni": 6, "Juli": 7, "Agustus": 8,
+            "September": 9, "Oktober": 10, "November": 11, "Desember": 12,
         }
 
         # waktu
@@ -49,13 +37,41 @@ class EventParser:
         start_time = time_match.group(1)
         end_time = time_match.group(2)
 
-        # kasus: 25 - 26 Juli 2026
+        # Kasus 3: Beda bulan (Contoh: 19 Juni - 30 Agustus 2026)
+        multi_month = re.match(
+            r"(\d{1,2})\s+([A-Za-z]+)\s*-\s*(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})", 
+            date_str
+        )
+
+        # Kasus 2: Bulan sama (Contoh: 25 - 26 Juli 2026)
         multi_day = re.match(
             r"(\d{1,2})\s*-\s*(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})",
             date_str
         )
+        
+        # Kasus 1: Hari tunggal (Contoh: 18 Juli 2026)
+        single_day = re.match(
+            r"(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})",
+            date_str
+        )
 
-        if multi_day:
+        if multi_month:
+            start_day = int(multi_month.group(1))
+            start_month = months[multi_month.group(2)]
+            end_day = int(multi_month.group(3))
+            end_month = months[multi_month.group(4)]
+            year = int(multi_month.group(5))
+
+            start_dt = datetime.strptime(
+                f"{year}-{start_month:02d}-{start_day:02d} {start_time}",
+                "%Y-%m-%d %H:%M"
+            )
+            end_dt = datetime.strptime(
+                f"{year}-{end_month:02d}-{end_day:02d} {end_time}",
+                "%Y-%m-%d %H:%M"
+            )
+
+        elif multi_day:
             start_day = int(multi_day.group(1))
             end_day = int(multi_day.group(2))
             month = months[multi_day.group(3)]
@@ -65,22 +81,12 @@ class EventParser:
                 f"{year}-{month:02d}-{start_day:02d} {start_time}",
                 "%Y-%m-%d %H:%M"
             )
-
             end_dt = datetime.strptime(
                 f"{year}-{month:02d}-{end_day:02d} {end_time}",
                 "%Y-%m-%d %H:%M"
             )
 
-        else:
-            # kasus: 18 Juli 2026
-            single_day = re.match(
-                r"(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})",
-                date_str
-            )
-
-            if not single_day:
-                return None
-
+        elif single_day:
             day = int(single_day.group(1))
             month = months[single_day.group(2)]
             year = int(single_day.group(3))
@@ -89,11 +95,13 @@ class EventParser:
                 f"{year}-{month:02d}-{day:02d} {start_time}",
                 "%Y-%m-%d %H:%M"
             )
-
             end_dt = datetime.strptime(
                 f"{year}-{month:02d}-{day:02d} {end_time}",
                 "%Y-%m-%d %H:%M"
             )
+            
+        else:
+            return None
 
         return (
             f"{start_dt.strftime('%Y-%m-%d %H:%M:%S')} Asia/Jakarta - "
