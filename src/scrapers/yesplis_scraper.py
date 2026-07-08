@@ -24,7 +24,7 @@ class YesplisScraper:
 
     def open_homepage(self):
         print("[INFO] Opening Yesplis homepage...")
-        self.page.goto(self.BASE_URL, wait_until="networkidle", timeout=60000)
+        self.page.goto(self.BASE_URL, wait_until="domcontentloaded", timeout=60000)
         self.page.wait_for_timeout(3000)
 
     def get_event_links(self, limit=30):
