@@ -11,6 +11,8 @@ LOG_FILE="$LOG_DIR/run_$(date +%Y%m%d_%H%M%S).log"
 
 {
     echo "=== $(date) ==="
+    # Load VPS-specific env vars (PG_HOST, PG_PORT, etc.)
+    [ -f "$SCRIPT_DIR/.env" ] && set -a && source "$SCRIPT_DIR/.env" && set +a
     source .venv/bin/activate
     python -m pipelines.scrape_daily
     python -m pipelines.push_to_postgres
