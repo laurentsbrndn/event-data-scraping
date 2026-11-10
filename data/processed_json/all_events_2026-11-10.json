@@ -10190,5 +10190,53 @@
         "photo": "https://assets.artatix.co.id/event/RNKJJQ8P49.jpg",
         "registration_link": "https://artatix.co.id/event/solo_city_jazz_2026",
         "apple_maps_link": "https://maps.apple.com/?ll=-7.5623419,110.8195969&q=Lokananta,%20Kota%20Surakarta,%20Jawa%20Tengah"
+    },
+    {
+        "id": "pesta-juara-bandung_wEq",
+        "source": "loket",
+        "title": "PESTA JUARA BANDUNG",
+        "description": "PESTA JUARA BANDUNG",
+        "organizer": "JUARAKAN HIDUPMU",
+        "location": "Lap. Brigif 15 Kujang, Cimahi",
+        "latitude": null,
+        "longitude": null,
+        "period": "2026-11-14 15:00:00 Asia/Jakarta - 2026-11-14 22:30:00 Asia/Jakarta",
+        "ticket_price": "14300",
+        "currency": "IDR",
+        "photo": "https://assets.loket.com/neo/production/images/banner/20261030113857_6ae41f6149773.jpeg",
+        "registration_link": "https://www.loket.com/event/pesta-juara-bandung_wEq",
+        "apple_maps_link": ""
+    },
+    {
+        "id": "manakala-spirit-60-smada",
+        "source": "yesplis",
+        "title": "MANAKALA SPIRIT 60 SMADA ",
+        "description": "𝐌𝓐𝐍𝐀𝓚𝐀𝐋𝐀 𝐒𝐏𝐈𝐑𝐈𝐓 𝟔𝟎 𝐒𝐌𝐀𝐃𝐀\nMerupakan salah satu acara tahunan yang diselenggarakan oleh SMAN 2 Banjarmasin. Pada tahun ini, 𝐌𝓐𝐍𝐀𝓚𝐀𝐋𝐀 𝐒𝐏𝐈𝐑𝐈𝐓 𝟔𝟎 hadir dengan menghadirkan 𝑷𝑬𝑹𝑼𝑵𝑮𝑮𝑼 sebagai guest star utama untuk memeriahkan puncak acara SPIRIT 60.\nSedikit informasi tentang Perunggu, mereka merupakan grup musik asal Jakarta yang dikenal melalui karya-karya dengan perpaduan musik rock alternatif dan lirik yang dekat dengan kehidupan sehari-hari. Lagu-lagunya berhasil menarik perhatian banyak pendengar musik Indonesia.\nTunggu apalagi?? Yuk, dapatkan tiketmu sekarang dan jadilah bagian dari kemeriahan 𝐌𝓐𝐍𝐀𝓚𝐀𝐋𝐀 𝐒𝐏𝐈𝐑𝐈𝐓 𝟔𝟎!\nSyarat dan Ketentuan:\n1. 𝐌𝓐𝐍𝐀𝓚𝐀𝐋𝐀 𝐒𝐏𝐈𝐑𝐈𝐓 𝟔𝟎 merupakan acara yang terbuka untuk umum dan dapat diikuti oleh semua kalangan.\n2. E-ticket hanya dapat dibeli melalui website Yesplis.\n3. Tiket yang telah dibeli tidak dapat diuangkan kembali (non-refundable).\n4. Pihak penyelenggara tidak bertanggung jawab atas pembelian tiket selain melalui website resmi Yesplis.\n5. E-ticket tidak boleh disebarluaskan karena hanya dapat dipindai satu kali untuk penukaran tiket gelang.\n6. Pastikan tidak ada kesalahan dalam mengisi alamat email karena e-ticket akan langsung dikirimkan ke alamat email yang telah didaftarkan.\n7. Jika terdapat kendala, silakan menghubungi Instagram resmi @osis.smadabjm.",
+        "organizer": "SMAN 2 Banjarmasin",
+        "location": "SMA NEGERI 2 BANJARMASIN , KOTA BANJARMASIN, KALIMANTAN SELATANSMA NEGERI 2 BANJARMASIN , KOTA BANJARMASIN, KALIMANTAN SELATAN",
+        "latitude": -3.3150589,
+        "longitude": 114.5888679,
+        "period": "",
+        "ticket_price": "0",
+        "currency": "IDR",
+        "photo": "https://ypassets.yesplis.com/261108/assets/ae84d175-c11c-4a96-b403-e0d3a615d4bc.png",
+        "registration_link": "https://yesplis.com/event/manakala-spirit-60-smada",
+        "apple_maps_link": "https://maps.apple.com/?ll=-3.3150589,114.5888679&q=SMA%20NEGERI%202%20BANJARMASIN%20,%20KOTA%20BANJARMASIN,%20KALIMANTAN%20SELATANSMA%20NEGERI%202%20BANJARMASIN%20,%20KOTA%20BANJARMASIN,%20KALIMANTAN%20SELATAN"
+    },
+    {
+        "id": "maliki-festival-vol4",
+        "source": "yesplis",
+        "title": "Maliki Festival Vol.4",
+        "description": "Maliki Festival 2026 merupakan ajang kolaborasi antara Dewan Eksekutif Mahasiswa (DEMA) UIN Maulana Malik Ibrahim Malang dan perayaan Dies Maulidiyah ke-65 UIN Malang yang mengusung tema \"Mengukir Prestasi, Membumikan Religi, Merayakan Sinergi\". Salah satu agenda utama dalam rangkaian kegiatan ini ialah Maliki Festival Concert, sebuah konser musik yang akan diselenggarakan pada 20 Desember 2026 di UIN Maulana Malik Ibrahim Malang. Acara ini menjadi malam puncak perayaan yang menghadirkan hiburan musik spektakuler sekaligus ruang apresiasi bagi kreativitas dan antusiasme mahasiswa serta masyarakat umum. Tidak hanya menjadi ajang hiburan, malam puncak ini juga akan diisi dengan penganugerahan penghargaan kepada para pemenang berbagai kompetisi yang telah diselenggarakan dalam rangkaian Maliki Festival 2026, meliputi kompetisi e-sports, bola voli, futsal, dan berbagai cabang perlombaan lainnya.",
+        "organizer": "Maliki Festival",
+        "location": "Lapangan Utama Kampus 1 UIN Malang, KOTA MALANG, JAWA TIMURLapangan Utama Kampus 1 UIN Malang, KOTA MALANG, JAWA TIMUR",
+        "latitude": -7.9691039,
+        "longitude": 112.629962,
+        "period": "",
+        "ticket_price": null,
+        "currency": "IDR",
+        "photo": "https://ypassets.yesplis.com/261109/assets/85ed942a-4426-4a60-93e3-b623f71ed38b.jpeg",
+        "registration_link": "https://yesplis.com/event/maliki-festival-vol4",
+        "apple_maps_link": "https://maps.apple.com/?ll=-7.9691039,112.629962&q=Lapangan%20Utama%20Kampus%201%20UIN%20Malang,%20KOTA%20MALANG,%20JAWA%20TIMURLapangan%20Utama%20Kampus%201%20UIN%20Malang,%20KOTA%20MALANG,%20JAWA%20TIMUR"
     }
 ]
